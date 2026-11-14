@@ -1,17 +1,17 @@
 import { navSidebarContents } from "./constants";
+import { NavSidebarTypes } from "./nav-sidebar.types";
 
-
-const NavSideBar = () => {
+const NavSideBar = ( { handleSelection } : NavSidebarTypes) => {
     return (
         <div>
             {
                 navSidebarContents.map(section => (
                     <div>
-                        <h5>{section.title}</h5>
+                        <h5 key={section.title}>{section.title}</h5>
                         <ul>
                             {
                                 section.children.map(subsection => (
-                                    <li>{subsection}</li>
+                                    <li key={subsection} onClick={() => handleSelection(subsection)}>{subsection}</li>
                                 ))
                             }
                         </ul>
