@@ -1,9 +1,12 @@
-const TableLabels = () => {
+import { TableLabelTypes } from "./component.types";
+
+const TableLabels = ( { labels } : TableLabelTypes ) => {
     return (
         <thead>
             <tr>
-                <th>Month</th>
-                <th>Savings</th>
+                {labels.map(label => (
+                    <th key={label.key}>{label.content}</th>
+                ))}
             </tr>
         </thead>
     )

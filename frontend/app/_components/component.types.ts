@@ -20,12 +20,17 @@ export interface NavSideBarCategoryTypes {
     handleSelection: Dispatch<SetStateAction<SideBarChildrenTitles>>;
 }
 
+export interface TableCell {
+    key: string;
+    content: ReactNode;
+}
+
 export interface TableLabelTypes {
-    labels: ReactNode[];
+    labels: TableCell[];
 }
 
 export interface TableRowTypes {
-    rowContent: ReactNode[];
+    rowContent: TableCell[] | undefined;
 }
 
 export interface TableColumn<T> {
