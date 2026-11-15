@@ -1,5 +1,5 @@
 import { ComponentType } from "react";
-import { SideBarChildrenTitles } from "../_components/constants";
+import { SideBarChildrenTitles } from "../constants";
 import GuildRequests from "./_views/GuildRequests";
 import ManageFilters from "./_views/ManageFilters";
 import ManageGuilds from "./_views/ManageGuilds";

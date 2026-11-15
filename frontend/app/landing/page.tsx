@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import NavSideBar from "../_components/NavSideBar";
-import { SideBarChildrenTitles } from "../_components/constants";
+import { SideBarChildrenTitles } from "../constants";
 import { selectionToComponent } from "./view-to-component";
 
 function LandingPage() {
