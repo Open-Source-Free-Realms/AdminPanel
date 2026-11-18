@@ -1,9 +1,11 @@
+import { ButtonTypes } from "./component.types";
 
-const Button = () => {
+const Button = ( { buttonText, buttonIcon, onClick } : ButtonTypes) => {
     return (
-        <div>
-           Button
-        </div>
+        <button>
+            {buttonIcon}
+            {buttonText}
+        </button>
     )
 }
 

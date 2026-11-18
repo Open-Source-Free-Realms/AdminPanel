@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import { ChangeEvent, Dispatch, ReactNode, SetStateAction } from "react";
 import { SideBarTitles, SideBarChildrenTitles } from "../constants";
 
 export interface SideBarSection {
@@ -44,4 +44,19 @@ export interface TableTypes<T> {
     tableTitle?: string;
     columns?: TableColumn<T>[];
     getRowKey: (row: T) => string;
+}
+
+export interface ContainerTypes {
+    children: ReactNode
+}
+
+export interface ButtonTypes {
+    buttonText?: string,
+    buttonIcon?: ReactNode,
+    onClick: () => void;
+}
+
+export interface InputTypes {
+    onChange: (event: ChangeEvent) => void;
+    placeholder?: string
 }
